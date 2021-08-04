@@ -8,20 +8,14 @@ help: ## Show this help
 
 build: buildAWS buildGoogle ## Build AWS & Google icons
 
-buildAWS: clean dlAWS unzipAWS ## Build AWS icons
+deploy: ## Copy scripts, stencils, templates, and documents to application's folders
+	cp -R Stencils/ ~/Library/Containers/com.omnigroup.OmniGraffle7/Data/Library/Application\ Support/The\ Omni\ Group//OmniGraffle/Stencils/
+	cp -R Scripts/ ~/Library/Containers/com.omnigroup.OmniGraffle7/Data/Library/Application\ Support/The\ Omni\ Group//OmniGraffle/Scripts/
+	cp -R Templates/ ~/Library/Containers/com.omnigroup.OmniGraffle7/Data/Library/Application\ Support/The\ Omni\ Group//OmniGraffle/Templates/
+	cp -R Documents/ ~/Documents/@Diagrams
 
-buildGoogle: clean dlGoogle unzipGoogle ## Build Google icons
-
-clean: ## Delete awsSource & awsTarget directories
-	@rm -rf awsSource awsTarget
-	rm -rf googleSource googleTarget
-
-dlAWS: ## Download AWS icons
+buildAWS: ## Download AWS icons, unzip, and normalize filenames
 	curl https://d1.awsstatic.com/webteam/architecture-icons/q2-2021/Asset-Package_04302021.9a0ee1879c72eb5b495566d3e0d97db954cf0258.zip --output awsIcons.zip
-dlGoogle: ## Download Google icons
-	curl  https://cloud.google.com/icons/files/google-cloud-icons.zip --output googleIcons.zip
-
-unzipAWS: ## Unzip AWS icons and normalize filenames
 	unzip -d awsSource awsIcons.zip
 	mv awsSource/Asset*/* awsSource/.
 	rm -rf awsSource/Asset* awsSource/__MACOSX
@@ -34,11 +28,16 @@ unzipAWS: ## Unzip AWS icons and normalize filenames
 	rename awsTarget/Arch_* -e 's/Arch_/SERVICE /'
 	rename awsTarget/* --delete=_48 -e 's/_/ /g' -e 's/-/ /g'
 
-unzipGoogle: ## Unzip Google icons and normalize filenames
+buildGoogle: ## Download AWS icons, unzip, and normalize filenames
+	rm -rf googleSource googleTarget googleIcons.zip
+	curl  https://cloud.google.com/icons/files/google-cloud-icons.zip --output googleIcons.zip
 	unzip -d googleSource googleIcons.zip
 	mv googleSource/Google*/Products*/* googleSource/.
 	rm -rf googleSource/Google* googleSource/__MACOSX
 	mkdir -p googleTarget
 	cp -R googleSource/*/*.svg googleTarget/
-#	rename googleTarget/* -e 's/ \(1\)//g'
 	rename googleTarget/* --delete=-512 -e 's/ \(1\)//g' -e 's/_/ /g' -e 's/-/ /g'
+
+clean: ## Delete awsSource & awsTarget directories
+	@rm -rf awsSource awsTarget awsIcons.zip
+	rm -rf googleSource googleTarget googleIcons.zip
