@@ -58,7 +58,13 @@ https://github.com/davidfsmith/AWS-OmniGraffle-Stencils/blob/main/README.md
 
 https://github.com/jamesscottbrown/omnigraffle-palette-generator
 
+## Microsoft architecture templates and icons
 
+* [Office 365](https://docs.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates?view=o365-worldwide)
+* [Azure](https://docs.microsoft.com/en-us/azure/architecture/icons/)
+* [Dynamic 365](https://docs.microsoft.com/en-us/dynamics365/get-started/icons)
+* [Microsoft Power Platform](https://docs.microsoft.com/en-us/power-platform/guidance/icons)
+* [Azzure Architecture](https://docs.microsoft.com/en-us/azure/architecture/browse/)
 
 ### previous content
 
