@@ -1,4 +1,4 @@
-![alt text](https://github.com/bhdicaire/![alt text](https://github.com/bhdicaire/omniGraffleStencils/raw/main/logo.png "Logo")/raw/main/logo.png "Logo")
+![alt text](https://github.com/bhdicaire/omniGraffleStencils/raw/main/logo.png "Logo")
 
 This repository consolidate more than 400 [OmniGraffle](https://www.omnigroup.com/omnigraffle) artefacts that I have collected and used over the years.
 
