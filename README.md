@@ -1,4 +1,4 @@
-![alt text](https://github.com/bhdicaire/![alt text](https://github.com/bhdicaire/omniGraffleStencils/raw/main/img/logo.png "Logo")/raw/main/logo.png "Logo")
+![alt text](https://github.com/bhdicaire/![alt text](https://github.com/bhdicaire/omniGraffleStencils/raw/main/logo.png "Logo")/raw/main/logo.png "Logo")
 
 This repository consolidate more than 400 [OmniGraffle](https://www.omnigroup.com/omnigraffle) artefacts that I have collected and used over the years.
 
@@ -19,7 +19,7 @@ If you don't find something, try third party commercial shape vendors such as [3
 
 ## Installation
 
-1. make install, it will copy newer stencils, templates, and scripts to $HOME/Library/Containers/com.omnigroup.OmniGraffle7.MacAppStore/Data/Library/Application\ Support/The\ Omni\ Group/OmniGraffle
+1. make install, it will copy newer stencils, templates, and scripts to ~/Library/Containers/com.omnigroup.OmniGraffle7.MacAppStore/Data/Library/Application\ Support/The\ Omni\ Group/OmniGraffle or ⁨~/⁨Library⁩/⁨Containers⁩/⁨com.omnigroup.OmniGraffle7⁩/⁨Data⁩/⁨Library⁩/Application Support⁩/The Omni Group⁩/⁨OmniGraffle⁩
 
 If you prefer installing one specific stencil:
 
